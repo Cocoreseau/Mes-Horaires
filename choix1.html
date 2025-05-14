@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rouen-1</title>
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Merci de choisir une option</h1>
+    <div class="image-container">
+        <a href="page1.html">
+            <img src="plan.jpg" alt="Image 1">
+        </a>
+        <a href="page2.html">
+            <img src="horaires.jpg" alt="Image 2">
+        </a>
+        <a href="page3.html">
+            <img src="parc.jpg" alt="Image 3">
+        </a>
+    </div>
+</body>
+</html>
