@@ -52,4 +52,74 @@
 
     .info {
       margin-top: 20px;
-      font-size: 1
+      font-size: 1.2em;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚇 Plan interactif – Métro Rouen</h1>
+
+  <div class="plan">
+
+    <!-- Ligne MT -->
+    <div class="ligne" id="ligne-mt">
+      <h2>Ligne MT</h2>
+      <div class="arret">Europe</div>
+      <div class="arret">Honoré de Balzac</div>
+      <div class="arret">Voltaire</div>
+      <div class="arret">Garibaldi</div>
+      <div class="arret">HDV Sotteville</div>
+      <div class="arret">14 Juillet</div>
+      <div class="arret">Jean Zay</div>
+      <div class="arret">Toit Familial</div>
+      <div class="arret">Champ de Courses</div>
+      <div class="arret">Ernest Renan</div>
+      <div class="arret">Le Parc</div>
+      <div class="arret">Maryse Bastié</div>
+      <div class="arret">Technopole</div>
+    </div>
+
+    <!-- Tronc commun -->
+    <div class="ligne tronc-commun" id="tronc">
+      <h2>Tronc Commun</h2>
+      <div class="arret">Saint Sever</div>
+      <div class="arret">Joffre Mutualité</div>
+      <div class="arret">Théâtre des Arts</div>
+      <div class="arret">Palais de Justice – Gisèle Halimi</div>
+      <div class="arret">Gare Rue Verte</div>
+      <div class="arret">Beauvoisine</div>
+      <div class="arret">Boulingrin</div>
+    </div>
+
+    <!-- Ligne MB -->
+    <div class="ligne" id="ligne-mb">
+      <h2>Ligne MB</h2>
+      <div class="arret">Avenue de Caen</div>
+      <div class="arret">Jean Jaurès</div>
+      <div class="arret">François Truffaut</div>
+      <div class="arret">Place du 8 Mai</div>
+      <div class="arret">Saint Julien</div>
+      <div class="arret">Charles de Gaulle</div>
+      <div class="arret">Provinces</div>
+      <div class="arret">J.-F. Kennedy</div>
+      <div class="arret">Léon Blum</div>
+      <div class="arret">Paul Cézanne</div>
+      <div class="arret">Georges Braques</div>
+    </div>
+  </div>
+
+  <div class="info" id="info"></div>
+
+  <script>
+    const arrets = document.querySelectorAll(".arret");
+    const info = document.getElementById("info");
+
+    arrets.forEach(arret => {
+      arret.addEventListener("click", () => {
+        info.textContent = `🚌 Prochain tram vers : ${arret.textContent}`;
+      });
+    });
+  </script>
+</body>
+</html>
