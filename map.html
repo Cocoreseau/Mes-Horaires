@@ -28,11 +28,10 @@
 
     async function fetchVehicles() {
       try {
-        const proxy = 'https://corsproxy.io/?';
         const url = 'https://gtfs.bus-tracker.fr/gtfs-rt/tcar/vehicle-positions.json';
-
-        const response = await fetch(proxy + encodeURIComponent(url));
-        const data = await response.json();
+        const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`);
+        const wrappedData = await response.json();
+        const data = JSON.parse(wrappedData.contents);
 
         vehicleLayer.clearLayers();
 
